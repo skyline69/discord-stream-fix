@@ -6,6 +6,16 @@ Discord's desktop client was observed requesting OpenH264 2.5.1 while its cleanu
 
 The Rust shim was tested with a live Discord stream on Fedora 44, KDE Wayland, and an NVIDIA GPU. Camera and outgoing streams have not been tested end to end. This workaround depends on Discord internals and may stop working after an update.
 
+## Demo
+
+### Before (artifacts visible or stream is loading)
+<img width="1283" height="747" alt="before" src="https://github.com/user-attachments/assets/cce2109e-9f11-4779-a5a3-0b27e91588ed" />
+
+
+### After (artifacts gone, stream loads)
+<img width="1280" height="721" alt="after" src="https://github.com/user-attachments/assets/cf94431a-ef0c-4efe-9f60-7b9e3b1e8844" />
+
+
 ## Requirements
 
 - Linux x86-64 with glibc and a running systemd user manager; tested on Fedora 44.
