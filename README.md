@@ -4,7 +4,7 @@ A per-user Linux workaround for Discord streams that fail with error 2012 or sho
 
 Discord's desktop client was observed requesting OpenH264 2.5.1 while its cleanup removed that file. Restoring it allowed streams to start, but both OpenH264 2.5.1 and 2.7.0 corrupted the affected H.264 stream. The Rust shim presents the OpenH264 interface Discord expects and decodes H.264 using Fedora's FFmpeg library in a separate linker namespace. Encoder calls still go to Cisco's OpenH264 library.
 
-The Rust shim was tested with a live Discord stream on Fedora 44, KDE Wayland, and an NVIDIA GPU. Camera and outgoing streams have not been tested end to end. This workaround depends on Discord internals and may stop working after an update.
+The Rust shim was tested with a live Discord stream on Fedora 44, KDE Wayland, and an NVIDIA GPU. Camera and outgoing streams have been tested end to end and they work! This workaround depends on Discord internals and may stop working after an update.
 
 ## Demo
 
